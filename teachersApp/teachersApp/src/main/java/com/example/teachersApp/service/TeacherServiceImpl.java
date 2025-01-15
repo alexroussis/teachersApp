@@ -42,7 +42,7 @@ public class TeacherServiceImpl implements TeacherService{
         return teacherDto;
     }
     @Override
-    public void updateTeacher(TeacherDto teacherDto) throws TeacherEmailAlreadyExistsException {        //UPDATE TEACHER AND CHECK FOR EMAIL(UNIQUE)
+    public void updateTeacher(TeacherDto teacherDto) throws TeacherEmailAlreadyExistsException {        //CHECK FOR EMAIL(UNIQUE) AND UPDATE TEACHER
         Teacher teacher = new Teacher();
         teacher.setId(teacherDto.getId());
         teacher.setFname(teacherDto.getFname());
