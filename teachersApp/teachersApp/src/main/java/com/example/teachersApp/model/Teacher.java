@@ -5,7 +5,8 @@ import jakarta.persistence.*;
 @Table(name = "teacher")
 public class Teacher {
 	@Id
-	@Column(name = "ID", nullable = false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false)
 	private int id;
 	@Column(name = "fname", nullable = false, length = 45)
 	private String fname;
